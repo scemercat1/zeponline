@@ -165,6 +165,11 @@ async def poll(interaction: discord.Interaction, question: str):
     await interaction.response.send_message("📊 Poll created.", ephemeral=True)
 
 # ======================
-# START BOT
+# SAFE START (RAILWAY)
 # ======================
-bot.run(os.environ["DISCORD_TOKEN"])
+token = os.getenv("DISCORD_TOKEN")
+
+if not token:
+    raise RuntimeError("DISCORD_TOKEN is missing!")
+
+bot.run(token)
