@@ -1,5 +1,5 @@
-# zeponline
-ZepOnline is a big moderation bot for Discord, designed with complex and profesional commands.
+# AirplaneON
+AirplaneON is a big moderation bot for Discord, designed with complex and profesional commands.
 
 # Advanced Moderation Bot
 
@@ -8,4 +8,3 @@ Owner locked.
 Role based permissions.
 Slash commands only.
 
-Hosted on Railway.
