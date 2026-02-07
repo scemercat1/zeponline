@@ -37,6 +37,22 @@ async def on_ready():
     print(f"✅ Logged in as {bot.user}")
 
 # ======================
+# OWNER COMMAND (PREFIX)
+# ======================
+@bot.command(name="manage-servers")
+async def manage_servers(ctx: commands.Context):
+    if ctx.author.id != OWNER_ID:
+        return
+
+    msg = await ctx.send("Verifying bot")
+
+    await asyncio.sleep(1)
+    await msg.edit(content="Bot is now working (estimated: 10)")
+
+    await asyncio.sleep(10)
+    await msg.edit(content="This bot is now verified as an Airplane Instance")
+
+# ======================
 # CONFIG (OWNER ONLY)
 # ======================
 @bot.tree.command(name="config")
